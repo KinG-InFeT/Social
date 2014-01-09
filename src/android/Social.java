@@ -21,8 +21,10 @@ public class Share extends CordovaPlugin {
 			JSONObject jo = args.getJSONObject(0);
 			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
 			callbackContext.success(1);
+			return true;
 		} catch (JSONException e) {
 			callbackContext.error("[ERROR] JSON error");
+			return false;
 		}
     }
 	
