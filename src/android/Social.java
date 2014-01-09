@@ -1,4 +1,7 @@
-package org.apache.cordova.plugin;
+//package org.apache.cordova.plugin;
+
+package org.apache.cordova.social;
+
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
