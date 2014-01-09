@@ -29,12 +29,12 @@ public class Social extends CordovaPlugin {
             //args.getLong(0)
 			
 			JSONObject jo = args.getJSONObject(0);
+			
 			this.StartShare(jo.getString("subject"), jo.getString("text")); 
+			
         }else {
             return false;
         }
-		
-		
 		
 		callbackContext.success();
 		return true;
