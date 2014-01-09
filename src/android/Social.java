@@ -24,18 +24,24 @@ public class Social extends CordovaPlugin {
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		
-		try {
+		if (action.equals("startshare")) {
+		
+            //args.getLong(0)
+			
 			JSONObject jo = args.getJSONObject(0);
-			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
-			callbackContext.success();
-			return true;
-		} catch (JSONException e) {
-			callbackContext.error("[ERROR] JSON error");
-			return false;
-		}
+			this.StartShare(jo.getString("subject"), jo.getString("text")); 
+        }else {
+            return false;
+        }
+		
+		
+		
+		callbackContext.success();
+		return true;
+		
     }
 	
-	private void doSendIntent(String subject, String text) {
+	public void StartShare(String subject, String text) {
 		Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
 		sendIntent.setType("text/plain");
 		sendIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
