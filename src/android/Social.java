@@ -19,18 +19,15 @@ import org.apache.cordova.CordovaInterface;
 
 public class Share extends CordovaPlugin {
 
-    public static final String TAG = "Share";
-
-
 	@Override
-    public boolean execute(String action, JSONArray args, String callbackId) throws JSONException {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		
 		try {
 			JSONObject jo = args.getJSONObject(0);
 			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
-			return new PluginResult(PluginResult.Status.OK);
+			callbackContext.success(1);
 		} catch (JSONException e) {
-			return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
+			callbackContext.error("[ERROR] JSON error");
 		}
     }
 	
