@@ -1,3 +1,14 @@
+/*
+ *
+ * Share plugin for Android
+ *
+ * @Author Luongo Vincenzo
+ *
+ * @licenze GPL v3
+ *
+ *
+ */
+
 package org.apache.cordova.social;
 
 

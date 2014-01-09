@@ -1,5 +1,10 @@
-/* 
+/*
  *
+ * Share plugin for Android
+ *
+ * @Author Luongo Vincenzo
+ *
+ * @licenze GPL v3
  *
  *
  */
