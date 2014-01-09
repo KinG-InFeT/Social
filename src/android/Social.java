@@ -18,29 +18,33 @@ import org.apache.cordova.CordovaInterface;
 //import android.provider.Settings;
 
 public class Share extends CordovaPlugin {
+
     public static final String TAG = "Share";
 
 
     /**
-     * Sets the context of the Command. This can then be used to do things like
-     * get file paths associated with the Activity.
-     *
-     * @param cordova The context of the main Activity.
-     * @param webView The CordovaWebView Cordova is running in.
+     * Constructor.
      */
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
+    public Share() {
+		/*
+		 * 
+		 */
     }
 	
     public boolean execute(String action, JSONArray args, String callbackId) throws JSONException {
-        try {
+        this.StartShare(action, args);
+    }
+	
+	public void StartShare(String action, JSONArray args) {
+	
+		try {
 			JSONObject jo = args.getJSONObject(0);
 			doSendIntent(jo.getString("subject"), jo.getString("text")); 
 			return new PluginResult(PluginResult.Status.OK);
 		} catch (JSONException e) {
 			return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
 		}
-    }
+	}
 	
 	private void doSendIntent(String subject, String text) {
 		Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
