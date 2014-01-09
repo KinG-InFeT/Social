@@ -11,8 +11,8 @@
     <repo>https://github.com/KinG-InFeT/Social.git</repo>
     <issue>https://github.com/KinG-InFeT/Social/issues</issue>
 
-    <js-module src="www/social.js" name="device">
-        <clobbers target="social" />
+    <js-module src="www/social.js" name="social">
+        <clobbers target="Social" />
     </js-module>
 
     <!-- android -->
