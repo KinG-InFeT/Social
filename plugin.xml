@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.social"
+    version="0.1.0">
+    <name>Social</name>
+    <description>Cordova Social Plugin</description>
+    <license>GPL v3</license>
+    <keywords>cordova,social,share</keywords>
+    <repo>https://github.com/KinG-InFeT/Social.git</repo>
+    <issue>https://github.com/KinG-InFeT/Social/issues</issue>
+
+    <js-module src="www/social.js" name="device">
+        <clobbers target="social" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Social" >
+                <param name="android-package" value="org.apache.cordova.social.Social"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Social.java" target-dir="src/org/apache/cordova/social" />
+    </platform>
+
+</plugin>

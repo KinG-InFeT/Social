@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "name": "org.apache.cordova.social",
+    "cordova_name": "Social",
+    "description": "Cordova Social Plugin",
+    "license": "GPL v3",
+    "keywords": [
+        "cordova",
+        "social",
+		"share"
+    ],
+    "engines": []
+}
