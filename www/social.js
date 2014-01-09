@@ -14,7 +14,7 @@ function Social() {
     exec( function(args) {
         success(args);
     }, function(args) {
-        fail(args);
+        error(args);
     }, 'Social', '', []);
 }
 

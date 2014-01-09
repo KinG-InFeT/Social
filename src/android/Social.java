@@ -26,7 +26,7 @@ public class Social extends CordovaPlugin {
 			callbackContext.success();
 			return true;
 		} catch (JSONException e) {
-			callbackContext.fail("[ERROR] JSON error");
+			callbackContext.error("[ERROR] JSON error");
 			return false;
 		}
     }
