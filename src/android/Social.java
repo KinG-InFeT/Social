@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 //import android.provider.Settings;
 
-public class Share extends CordovaPlugin {
+public class Social extends CordovaPlugin {
 
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -20,7 +20,7 @@ public class Share extends CordovaPlugin {
 		try {
 			JSONObject jo = args.getJSONObject(0);
 			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
-			callbackContext.success(1);
+			callbackContext.success();
 			return true;
 		} catch (JSONException e) {
 			callbackContext.error("[ERROR] JSON error");
