@@ -15,6 +15,12 @@ import org.json.JSONObject;
 
 public class Social extends CordovaPlugin {
 
+	/**
+     * Constructor.
+     */
+    public Social() {
+    }
+
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		
