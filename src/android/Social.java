@@ -18,15 +18,15 @@ public class Social extends CordovaPlugin {
 	@Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		
-		//try {
+		try {
 			JSONObject jo = args.getJSONObject(0);
 			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
 			callbackContext.success();
 			return true;
-		//} catch (JSONException e) {
-			//callbackContext.error("[ERROR] JSON error");
-			//return false;
-		//}
+		} catch (JSONException e) {
+			callbackContext.error("[ERROR] JSON error");
+			return false;
+		}
     }
 	
 	private void doSendIntent(String subject, String text) {
