@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1",
+    "version": "0.1.0",
     "name": "org.apache.cordova.social",
     "cordova_name": "Social",
     "description": "Cordova Social Plugin",
