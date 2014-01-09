@@ -22,29 +22,17 @@ public class Share extends CordovaPlugin {
     public static final String TAG = "Share";
 
 
-    /**
-     * Constructor.
-     */
-    public Share() {
-		/*
-		 * 
-		 */
-    }
-	
+	@Override
     public boolean execute(String action, JSONArray args, String callbackId) throws JSONException {
-        this.StartShare(action, args);
-    }
-	
-	public void StartShare(String action, JSONArray args) {
-	
+		
 		try {
 			JSONObject jo = args.getJSONObject(0);
-			doSendIntent(jo.getString("subject"), jo.getString("text")); 
+			this.doSendIntent(jo.getString("subject"), jo.getString("text")); 
 			return new PluginResult(PluginResult.Status.OK);
 		} catch (JSONException e) {
 			return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
 		}
-	}
+    }
 	
 	private void doSendIntent(String subject, String text) {
 		Intent sendIntent = new Intent(android.content.Intent.ACTION_SEND);
