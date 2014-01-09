@@ -1,19 +1,14 @@
+package org.apache.cordova.plugin;
 
-package org.apache.cordova.social;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
+import android.content.Intent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.content.Intent;
-
-//import org.apache.cordova.api.Plugin;
-//import org.apache.cordova.api.PluginResult;
-
-import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaInterface;
 
 //import android.provider.Settings;
 
